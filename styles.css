@@ -187,19 +187,19 @@ footer {
     display: none;
 }
 .profile-LINKEDIN {
-    background-image: url(/imagenes/icon-linkedin-big.svg);
+    background-image: url(imagenes/icon-linkedin-big.svg);
     background-size: 24px 24px;
 }
 .profile-GITHUB {
-    background-image: url(/imagenes/icon-github-big.svg);
+    background-image: url(imagenes/icon-github-big.svg);
     background-size: 26px 26px;
 }
 .profile-TWITTER {
-    background-image: url(/imagenes/icon-twitter-big.svg);
+    background-image: url(imagenes/icon-twitter-big.svg);
     background-size: 32px 32px;
 }
 .profile-ALURA {
-    background-image: url(/imagenes/logo-aluraespanhol.svg);
+    background-image: url(imagenes/logo-aluraespanhol.svg);
     background-size: 25px auto;
     /* margin: 0 5px 0; */
 }

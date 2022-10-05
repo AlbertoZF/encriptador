@@ -12,9 +12,7 @@
           
   <body>
     <script>
-      function imprimir(frase) {
-          document.write(frase);
-      }
+
       
       function ocultarBusqueda() {
         var mensaje = document.getElementById("texto").value;
@@ -84,24 +82,24 @@
     
     <main>
       
-      <img src="/imagenes/logo-alura.png" alt="Alura Latam" class="logo">
+      <img src="imagenes/logo-alura.png" alt="Alura Latam" class="logo">
       <div class="contenedorFlex">
         
           <div class="izquierda">
             <textarea class="textoPrincipal izquierda" autofocus placeholder="Escribe aquí el texto a encriptar/desencriptar" name="textarea" rows="10" cols="" id="texto" oninput="this.value = this.value.replace(/[^a-z ]/,'')"></textarea><br/>
             <h3 id="alerta"></h3>
-            <p id="info"><img src="imagenes/Vector.png"> Sólo letras minúsculas y sin acentos</p>
+            <p id="info"><img src="imagenes/info.png"> Sólo letras minúsculas y sin acentos</p>
             <input class="botonEncriptar" onclick="ocultarBusqueda(), encriptar()" type="submit" value="Encriptar" id="btnEncriptar">
             <input class="botonDesencriptar" onclick="ocultarDes(), desEncriptar()" type="submit" value="Desencriptar" id="btnDesencriptar">
           </div>
           <div class="derecha">
             <div class="busqueda" id="recuadroBusqueda">
-              <img src="imagenes/Muñeco.png" class="imgBusqueda">
+              <img src="imagenes/busqueda.png" class="imgBusqueda">
               <span><h2>Ningún mensaje fue encontrado</h2></span><br/>
               <span><h3>Ingresa el texto que desees encriptar o desencriptar.</h3></span>
             </div>
             <div class=resultado id="resultado" value="Resultado"></div>
-            <input class="botonCopiar" onclick="copiarResultado()" value="Copiar" id="btnCopiar">
+            <input class="botonCopiar" onclick="copiarResultado()" type="submit" value="Copiar" id="btnCopiar">
           </div>
         
       </div>
