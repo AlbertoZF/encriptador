@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+    <title>Encriptador</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+          
+  <body>
+    <script>
+      function imprimir(frase) {
+          document.write(frase);
+      }
+      
+      function ocultarBusqueda() {
+        var mensaje = document.getElementById("texto").value;
+        if (mensaje == "")
+        {
+          document.getElementById("alerta").innerHTML = "Para Encriptar es necesario que escribas un mensaje!"
+        }
+        else {
+          document.getElementById("recuadroBusqueda").style.display = "none";
+          document.getElementById("resultado").style.display = "flex";
+          document.getElementById("btnCopiar").style.display = "flex";
+          document.getElementById("alerta").innerHTML = "Mensaje Encriptado!"
+        }
+      }
+      ocultarBusqueda();
+
+      function ocultarDes() {
+        var mensaje = document.getElementById("texto").value;
+        if (mensaje == "")
+        {
+          document.getElementById("alerta").innerHTML = "Para Desencriptar es necesario que escribas un mensaje!"
+        }
+        else {
+          document.getElementById("recuadroBusqueda").style.display = "none";
+          document.getElementById("resultado").style.display = "flex";
+          document.getElementById("btnCopiar").style.display = "flex";
+          document.getElementById("alerta").innerHTML = "Mensaje Des-Encriptado!"
+        }
+      }
+      ocultarBusqueda();
+
+      function encriptar(){
+        var mensaje = document.getElementById("texto").value;
+        let pasoE = mensaje.replace(/e/g, "enter");
+        let pasoI = pasoE.replace(/i/g, "imes");
+        let pasoA = pasoI.replace(/a/g, "ai");
+        let pasoO = pasoA.replace(/o/g, "ober");
+        let pasoU = pasoO.replace(/u/g, "ufat");
+        codificado = pasoU;
+        document.getElementById("resultado").innerHTML = codificado;
+      }
+
+      function desEncriptar(){
+        var mensaje = document.getElementById("texto").value;
+        let revU = mensaje.replace(/ufat/g, "u");
+        let revO = revU.replace(/ober/g, "o");
+        let revA = revO.replace(/ai/g, "a");
+        let revI = revA.replace(/imes/g, "i");
+        let revE = revI.replace(/enter/g, "e");
+        deCodificado = revE;
+        document.getElementById("resultado").innerHTML = deCodificado;
+      }
+      function copiarResultado() {
+        var textoCopiado = document.getElementById("resultado").textContent;
+        document.getElementById("resultado").value = textoCopiado;
+        //textoCopiado.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(textoCopiado);
+        copiado()
+      }
+
+      function copiado() {
+       document.getElementById("alerta").innerHTML = "Se ha copiado el Texto"
+      } 
+               
+    </script>
+    
+    
+    <main>
+      
+      <img src="/imagenes/Logo.png" alt="Alura Latam" class="logo">
+      <div class="contenedorFlex">
+        
+          <div class="izquierda">
+            <textarea class="textoPrincipal izquierda" autofocus placeholder="Escribe aquí el texto a encriptar/desencriptar" name="textarea" rows="10" cols="" id="texto" oninput="this.value = this.value.replace(/[^a-z ]/,'')"></textarea><br/>
+            <h3 id="alerta"></h3>
+            <p id="info"><img src="imagenes/Vector.png"> Sólo letras minúsculas y sin acentos</p>
+            <input class="botonEncriptar" onclick="ocultarBusqueda(), encriptar()" type="submit" value="Encriptar" id="btnEncriptar">
+            <input class="botonDesencriptar" onclick="ocultarDes(), desEncriptar()" type="submit" value="Desencriptar" id="btnDesencriptar">
+          </div>
+          <div class="derecha">
+            <div class="busqueda" id="recuadroBusqueda">
+              <img src="imagenes/Muñeco.png" class="imgBusqueda">
+              <span><h2>Ningún mensaje fue encontrado</h2></span><br/>
+              <span><h3>Ingresa el texto que desees encriptar o desencriptar.</h3></span>
+            </div>
+            <div class=resultado id="resultado" value="Resultado"></div>
+            <input class="botonCopiar" onclick="copiarResultado()" value="Copiar" id="btnCopiar">
+          </div>
+        
+      </div>
+      
+    </main>
+
+
+
+
+    <footer>
+      <div class="profile-header-avatarAndEdit-wrapper" >
+        <div class="profile-header-avatarAndEdit">
+            <img class="profile-header-avatar" src="https://cdn2.gnarususercontent.com.br/6/473498/56a36bae-59db-4c15-b300-9a378570e113.jpg?width=100&amp;height=100&amp;aspect_ratio=1:1" style="border-color: #2A7AE4" alt="Luis Alberto Zaragoza">
+            
+                
+        </div>
+        <h2 class="nombre-perfil">Luis Alberto Zaragoza</h2>
+                       
+        <div class="profile-header-roleLabel">
+            <a class="profile-link profile-LINKEDIN" href="https://www.linkedin.com/in/luis-alberto-zaragoza-frutos" rel="noopener nofollow" target="_blank">
+            <span class="profile-description profile-LINKEDIN-description">
+                Linkedin
+            </span>
+            </a>
+            
+            <a class="profile-link profile-GITHUB" href="https://github.com/AlbertoZF" rel="noopener nofollow" target="_blank">
+            <span class="profile-description profile-GITHUB-description">
+                Github
+            </span>
+            </a>
+                                        
+            <a class="profile-link profile-TWITTER" href="https://twitter.com/bubulubueno" rel="noopener nofollow" target="_blank">
+            <span class="profile-description profile-TWITTER-description">
+                Twitter
+            </span>
+            </a>
+
+            <a class="profile-link profile-ALURA" href="https://app.aluracursos.com/user/alberto" rel="noopener nofollow" target="_blank">
+              <span class="profile-description profile-ALURA-description">
+                  Alura
+              </span>
+              </a>                
+        </div>
+    </div>
+    </footer>
+
+  </body>
+  </html> 
