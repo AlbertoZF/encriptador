@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">         
     <title>Encriptador</title>
+    <link href="favicon.ico" rel="icon">
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
@@ -11,9 +12,7 @@
   </head>
           
   <body>
-    <script>
-
-      
+    <script>      
       function ocultarBusqueda() {
         var mensaje = document.getElementById("texto").value;
         if (mensaje == "")
@@ -26,9 +25,7 @@
           document.getElementById("btnCopiar").style.display = "flex";
           document.getElementById("alerta").innerHTML = "Mensaje Encriptado!"
         }
-      }
-      ocultarBusqueda();
-
+      }  
       function ocultarDes() {
         var mensaje = document.getElementById("texto").value;
         if (mensaje == "")
@@ -42,8 +39,6 @@
           document.getElementById("alerta").innerHTML = "Mensaje Des-Encriptado!"
         }
       }
-      ocultarBusqueda();
-
       function encriptar(){
         var mensaje = document.getElementById("texto").value;
         let pasoE = mensaje.replace(/e/g, "enter");
@@ -54,7 +49,6 @@
         codificado = pasoU;
         document.getElementById("resultado").innerHTML = codificado;
       }
-
       function desEncriptar(){
         var mensaje = document.getElementById("texto").value;
         let revU = mensaje.replace(/ufat/g, "u");
@@ -72,19 +66,13 @@
         navigator.clipboard.writeText(textoCopiado);
         copiado()
       }
-
       function copiado() {
        document.getElementById("alerta").innerHTML = "Se ha copiado el Texto"
-      } 
-               
-    </script>
-    
-    
-    <main>
-      
+      }                
+    </script>    
+    <main>      
       <img src="imagenes/logo-alura.png" alt="Alura Latam" class="logo">
-      <div class="contenedorFlex">
-        
+      <div class="contenedorFlex">    
           <div class="izquierda">
             <textarea class="textoPrincipal izquierda" autofocus placeholder="Escribe aquí el texto a encriptar/desencriptar" name="textarea" rows="10" cols="" id="texto" oninput="this.value = this.value.replace(/[^a-z ]/,'')"></textarea><br/>
             <h3 id="alerta"></h3>
@@ -100,43 +88,31 @@
             </div>
             <div class=resultado id="resultado" value="Resultado"></div>
             <input class="botonCopiar" onclick="copiarResultado()" type="submit" value="Copiar" id="btnCopiar">
-          </div>
-        
-      </div>
-      
+          </div>        
+      </div>      
     </main>
-
-
-
-
     <footer>
       <div class="profile-header-avatarAndEdit-wrapper" >
         <div class="profile-header-avatarAndEdit">
-            <img class="profile-header-avatar" src="https://cdn2.gnarususercontent.com.br/6/473498/56a36bae-59db-4c15-b300-9a378570e113.jpg?width=100&amp;height=100&amp;aspect_ratio=1:1" style="border-color: #2A7AE4" alt="Luis Alberto Zaragoza">
-            
-                
+            <img class="profile-header-avatar" src="https://cdn2.gnarususercontent.com.br/6/473498/56a36bae-59db-4c15-b300-9a378570e113.jpg?width=100&amp;height=100&amp;aspect_ratio=1:1" style="border-color: #2A7AE4" alt="Luis Alberto Zaragoza">                
         </div>
-        <h2 class="nombre-perfil">Luis Alberto Zaragoza</h2>
-                       
+        <h2 class="nombre-perfil">Luis Alberto Zaragoza</h2>                       
         <div class="profile-header-roleLabel">
             <a class="profile-link profile-LINKEDIN" href="https://www.linkedin.com/in/luis-alberto-zaragoza-frutos" rel="noopener nofollow" target="_blank">
             <span class="profile-description profile-LINKEDIN-description">
                 Linkedin
             </span>
-            </a>
-            
+            </a>            
             <a class="profile-link profile-GITHUB" href="https://github.com/AlbertoZF" rel="noopener nofollow" target="_blank">
             <span class="profile-description profile-GITHUB-description">
                 Github
             </span>
-            </a>
-                                        
+            </a>                                        
             <a class="profile-link profile-TWITTER" href="https://twitter.com/bubulubueno" rel="noopener nofollow" target="_blank">
             <span class="profile-description profile-TWITTER-description">
                 Twitter
             </span>
             </a>
-
             <a class="profile-link profile-ALURA" href="https://app.aluracursos.com/user/alberto" rel="noopener nofollow" target="_blank">
               <span class="profile-description profile-ALURA-description">
                   Alura
@@ -145,6 +121,5 @@
         </div>
     </div>
     </footer>
-
   </body>
   </html> 
